@@ -17,6 +17,27 @@
   <link rel="stylesheet" href="../style.css" />
   <script defer src="../script.js"></script>
   <script defer src="../contact-fix.js"></script>
+  <script defer src="../ux-history-fix.js"></script>
+  <style>
+  @media (max-width: 720px) {
+    header.site .nav { position: relative; }
+    header.site .nav .nav-links {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+      z-index: 20;
+    }
+    header.site[data-menu-open="true"] .nav .nav-links { display: flex; }
+  }
+  </style>
 </head>
 <body>
     <header class="site">
@@ -96,8 +117,6 @@
   </footer>
 </body>
 </html>
-
-
 
 
 
