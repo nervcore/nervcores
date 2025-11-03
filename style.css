@@ -77,6 +77,13 @@ html[data-theme='light'] .icon-moon { display: none; }
 .hero p { color: var(--muted); margin: 0 0 var(--space-4); }
 .hero .cta-group { display: flex; gap: var(--space-3); margin-top: var(--space-3); flex-wrap: wrap; }
 .hero .badges { display: flex; gap: var(--space-2); margin-top: var(--space-3); flex-wrap: wrap; }
+/* Generic badges/chips layout */
+.badges { display: flex; flex-wrap: wrap; gap: var(--space-2); row-gap: 10px; margin-top: var(--space-2); margin-bottom: var(--space-2); }
+.badge, .chip { display: inline-flex; align-items: center; }
+/* Ensure images inside cards have breathing room */
+.card img { margin-bottom: var(--space-3); }
+/* Stacked buttons spacing */
+.btn + .btn { margin-top: var(--space-2); }
 .badges { display: flex; flex-wrap: wrap; gap: var(--space-2); row-gap: 10px; }
 .badge, .chip { display: inline-flex; align-items: center; }
 .badge { background: var(--surface); border: 1px solid var(--accent); color: var(--accent); padding: 6px 10px; border-radius: 999px; font-size: 12px; }
@@ -156,15 +163,17 @@ footer .social a:hover { background: var(--bg-alt); }
 /* Responsive */
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; }
-  .split { grid-template-columns: 1fr; }
-  .grid-3 { grid-template-columns: 1fr; }
-  .grid-4 { grid-template-columns: 1fr; }
+  .split { grid-template-columns: 1fr; row-gap: var(--space-6); }
+  .grid-3 { grid-template-columns: 1fr; row-gap: var(--space-6); }
+  .grid-4 { grid-template-columns: 1fr; row-gap: var(--space-6); }
   .contact-grid { grid-template-columns: 1fr; }
   /* Improve vertical rhythm when stacked on mobile */
-  .card { margin-bottom: var(--space-4); }
+  .card { margin-bottom: var(--space-5); }
   .card:last-child { margin-bottom: 0; }
-  .card .badges { margin-top: var(--space-2); row-gap: 10px; }
+  .card .badges { margin-top: var(--space-2); margin-bottom: var(--space-3); row-gap: 10px; }
   .card .btn { margin-top: var(--space-3); }
+  /* Section spacing tweaks */
+  section { margin-block: var(--space-6); }
 }
 
 /* Global type & section rhythm */
