@@ -77,6 +77,8 @@ html[data-theme='light'] .icon-moon { display: none; }
 .hero p { color: var(--muted); margin: 0 0 var(--space-4); }
 .hero .cta-group { display: flex; gap: var(--space-3); margin-top: var(--space-3); flex-wrap: wrap; }
 .hero .badges { display: flex; gap: var(--space-2); margin-top: var(--space-3); flex-wrap: wrap; }
+.badges { display: flex; flex-wrap: wrap; gap: var(--space-2); row-gap: 10px; }
+.badge, .chip { display: inline-flex; align-items: center; }
 .badge { background: var(--surface); border: 1px solid var(--accent); color: var(--accent); padding: 6px 10px; border-radius: 999px; font-size: 12px; }
 /* Hero media video visibility in light/dark */
 .hero-media video { max-width: 100%; border-radius: 12px; display: block; }
@@ -158,6 +160,11 @@ footer .social a:hover { background: var(--bg-alt); }
   .grid-3 { grid-template-columns: 1fr; }
   .grid-4 { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
+  /* Improve vertical rhythm when stacked on mobile */
+  .card { margin-bottom: var(--space-4); }
+  .card:last-child { margin-bottom: 0; }
+  .card .badges { margin-top: var(--space-2); row-gap: 10px; }
+  .card .btn { margin-top: var(--space-3); }
 }
 
 /* Global type & section rhythm */
